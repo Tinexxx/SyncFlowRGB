@@ -1,0 +1,10 @@
+package me.kavishdevar.openrgb.models
+
+enum class ModeDirection {
+    MODE_DIRECTION_LEFT,
+    MODE_DIRECTION_RIGHT,
+    MODE_DIRECTION_UP,
+    MODE_DIRECTION_DOWN,
+    MODE_DIRECTION_HORIZONTAL,
+    MODE_DIRECTION_VERTICAL
+}

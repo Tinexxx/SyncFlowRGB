@@ -1,6 +1,7 @@
 [versions]
-agp = "8.6.0-alpha08"
-kotlin = "1.9.0"
+agp = "8.6.1"
+kotlin = "2.1.10"
+compose-compiler = "2.1.10"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -10,6 +11,9 @@ activityCompose = "1.8.0"
 composeBom = "2024.04.01"
 openrgbClient = "1.15"
 colorpickerCompose = "1.1.1"
+navigationCompose = "2.7.7"
+coroutines = "1.7.3"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,8 +32,11 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 openrgb-client = { group = "io.gitlab.mguimard", name = "openrgb-client", version.ref = "openrgbClient" }
 colorpicker-compose = { group = "com.github.skydoves", name = "colorpicker-compose", version.ref = "colorpickerCompose" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+compose-compiler = { group = "org.jetbrains.kotlin", name = "kotlin-compose-compiler-plugin-embeddable", version.ref = "compose-compiler" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
