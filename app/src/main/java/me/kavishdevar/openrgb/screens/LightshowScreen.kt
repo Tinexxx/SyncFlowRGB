@@ -63,8 +63,8 @@ import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.toSize
 import androidx.compose.ui.zIndex
-import me.kavishdevar.openrgb.GradientButton
-import me.kavishdevar.openrgb.getDeviceIcon
+import me.kavishdevar.openrgb.components.GradientButton
+import me.kavishdevar.openrgb.logic.getDeviceIcon
 import kotlin.math.pow
 
 /* ------------------------------------------------------------------

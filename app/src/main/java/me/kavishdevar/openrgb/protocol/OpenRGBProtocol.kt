@@ -54,6 +54,7 @@ object OpenRGBProtocol {
         return ByteBuffer.allocate(HEADER_SIZE)
             .order(ByteOrder.LITTLE_ENDIAN)
             .put(MAGIC_STRING)
+
             .putInt(deviceId)
             .putInt(command.value)
             .putInt(dataLength)

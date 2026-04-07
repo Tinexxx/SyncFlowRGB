@@ -326,7 +326,7 @@ class OpenRGBClient(private val host: String, private val port: Int, private val
 
         buffer.int // discard it
 
-        // ✅ Now read the real profile count
+
         val profileCount = buffer.short.toInt()
         val profiles = mutableListOf<String>()
 
@@ -502,7 +502,7 @@ class OpenRGBClient(private val host: String, private val port: Int, private val
 
         // Calculate inner ModeData size (fields and conditional protocol-version fields)
         val innerSize =
-            4 + // mode_idx
+                    4 + // mode_idx
                     2 + nameBytes.size + // name length (short) + name bytes (includes null)
                     4 + // value
                     4 + // flags

@@ -1,0 +1,1083 @@
+kotlin version: 2.1.10
+error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: C:/Users/gamer/AndroidStudioProjects/MeineRGBv2/app/src/main/java/me/kavishdevar/openrgb/components/DeviceControlsContent.kt
+The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:55)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:42)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:28)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:192)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.runBackend(jvmCompilerPipeline.kt:80)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileModule(jvmCompilerPipelineLightTree.kt:264)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileSingleModuleUsingFrontendIrAndLightTree(jvmCompilerPipelineLightTree.kt:231)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineLightTreeKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipelineLightTree.kt:86)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:146)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:102)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.exec(CLICompiler.kt:316)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally$lambda$9$compile(IncrementalCompilerRunner.kt:249)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.tryCompileIncrementally(IncrementalCompilerRunner.kt:267)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:120)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:683)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:91)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1811)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN name:MatrixEditor-wAHlXBw visibility:private modality:FINAL <> (device:me.kavishdevar.openrgb.models.OpenRGBDevice, deviceIndex:kotlin.Int, viewModel:me.kavishdevar.openrgb.ui_logic.MainViewModel, initialBrushColor:androidx.compose.ui.graphics.Color, cellSize:androidx.compose.ui.unit.Dp, cellSpacing:androidx.compose.ui.unit.Dp, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int, $default:kotlin.Int) returnType:kotlin.Unit
+  annotations:
+    Composable
+    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  VALUE_PARAMETER name:device index:0 type:me.kavishdevar.openrgb.models.OpenRGBDevice
+  VALUE_PARAMETER name:deviceIndex index:1 type:kotlin.Int
+  VALUE_PARAMETER name:viewModel index:2 type:me.kavishdevar.openrgb.ui_logic.MainViewModel
+  VALUE_PARAMETER name:initialBrushColor index:3 type:androidx.compose.ui.graphics.Color [assignable]
+  VALUE_PARAMETER name:cellSize index:4 type:androidx.compose.ui.unit.Dp [assignable]
+  VALUE_PARAMETER name:cellSpacing index:5 type:androidx.compose.ui.unit.Dp [assignable]
+  VALUE_PARAMETER name:$composer index:6 type:androidx.compose.runtime.Composer? [assignable]
+  VALUE_PARAMETER name:$changed index:7 type:kotlin.Int
+  VALUE_PARAMETER MASK_FOR_DEFAULT_FUNCTION name:$default index:8 type:kotlin.Int
+  BLOCK_BODY
+    BLOCK type=kotlin.Unit origin=null
+      SET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+        CALL 'public abstract fun startRestartGroup (key: kotlin.Int): androidx.compose.runtime.Composer declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.Composer origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+          key: CONST Int type=kotlin.Int value=2000848768
+      CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+        sourceInformation: CONST String type=kotlin.String value="C(MatrixEditor)P(2,3,5,4:c#ui.graphics.Color,0:c#ui.unit.Dp,1:c#ui.unit.Dp)374@16297L7,376@16355L266,386@16695L937,386@16667L965,411@17674L55,411@17657L72,413@17735L4179:DeviceControlsContent.kt#6fy1tv"
+    VAR name:$dirty type:kotlin.Int [val]
+      GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=1
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=6
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=6
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: WHEN type=kotlin.Boolean origin=IF
+                  BRANCH
+                    if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                      arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                        $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                        other: CONST Int type=kotlin.Int value=8
+                      arg1: CONST Int type=kotlin.Int value=0
+                    then: CALL 'public abstract fun changed (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                  BRANCH
+                    if: CONST Boolean type=kotlin.Boolean value=true
+                    then: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                then: CONST Int type=kotlin.Int value=4
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=2
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=2
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=48
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=48
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  value: GET_VAR 'deviceIndex: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                then: CONST Int type=kotlin.Int value=32
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=16
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=4
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=384
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=384
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: WHEN type=kotlin.Boolean origin=IF
+                  BRANCH
+                    if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                      arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                        $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                        other: CONST Int type=kotlin.Int value=512
+                      arg1: CONST Int type=kotlin.Int value=0
+                    then: CALL 'public abstract fun changed (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                  BRANCH
+                    if: CONST Boolean type=kotlin.Boolean value=true
+                    then: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                then: CONST Int type=kotlin.Int value=256
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=128
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=8
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=3072
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=3072
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Long): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  value: CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=kotlin.Long origin=null
+                    <T>: androidx.compose.ui.graphics.Color
+                    <R>: kotlin.Long
+                    v: GET_VAR 'initialBrushColor: androidx.compose.ui.graphics.Color [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.graphics.Color origin=null
+                then: CONST Int type=kotlin.Int value=2048
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=1024
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=16
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=24576
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=24576
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Float): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  value: CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=kotlin.Float origin=null
+                    <T>: androidx.compose.ui.unit.Dp
+                    <R>: kotlin.Float
+                    v: GET_VAR 'cellSize: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                then: CONST Int type=kotlin.Int value=16384
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=8192
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=32
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=196608
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=196608
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Float): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  value: CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=kotlin.Float origin=null
+                    <T>: androidx.compose.ui.unit.Dp
+                    <R>: kotlin.Float
+                    v: GET_VAR 'cellSpacing: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                then: CONST Int type=kotlin.Int value=131072
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=65536
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+              arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                other: CONST Int type=kotlin.Int value=74899
+              arg1: CONST Int type=kotlin.Int value=74898
+          arg1: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public abstract fun <get-skipping> (): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+              $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+        then: BLOCK type=kotlin.Unit origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                    $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    other: CONST Int type=kotlin.Int value=8
+                  arg1: CONST Int type=kotlin.Int value=0
+              then: SET_VAR 'initialBrushColor: androidx.compose.ui.graphics.Color [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.graphics.Color origin=null
+                CALL 'public final fun getWhite-0d7_KjU (): androidx.compose.ui.graphics.Color declared in androidx.compose.ui.graphics.Color.Companion' type=androidx.compose.ui.graphics.Color origin=GET_PROPERTY
+                  $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.graphics.Color.Companion visibility:public [final,static] declared in androidx.compose.ui.graphics.Color' type=androidx.compose.ui.graphics.Color.Companion origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                    $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    other: CONST Int type=kotlin.Int value=16
+                  arg1: CONST Int type=kotlin.Int value=0
+              then: SET_VAR 'cellSize: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                  $receiver: CONST Int type=kotlin.Int value=28
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                    $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    other: CONST Int type=kotlin.Int value=32
+                  arg1: CONST Int type=kotlin.Int value=0
+              then: SET_VAR 'cellSpacing: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                  $receiver: CONST Int type=kotlin.Int value=4
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventStart (key: kotlin.Int, dirty1: kotlin.Int, dirty2: kotlin.Int, info: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                key: CONST Int type=kotlin.Int value=2000848768
+                dirty1: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                dirty2: CONST Int type=kotlin.Int value=-1
+                info: CONST String type=kotlin.String value="me.kavishdevar.openrgb.components.MatrixEditor (DeviceControlsContent.kt:373)"
+          VAR name:context type:android.content.Context [val]
+            CALL 'public final fun <get-current> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): T of androidx.compose.runtime.CompositionLocal [inline] declared in androidx.compose.runtime.CompositionLocal' type=android.content.Context origin=GET_PROPERTY
+              $this: TYPE_OP type=androidx.compose.runtime.CompositionLocal<T of androidx.compose.runtime.CompositionLocal> origin=IMPLICIT_CAST typeOperand=androidx.compose.runtime.CompositionLocal<T of androidx.compose.runtime.CompositionLocal>
+                CALL 'public final fun <get-LocalContext> (): androidx.compose.runtime.ProvidableCompositionLocal<android.content.Context> declared in androidx.compose.ui.platform.AndroidCompositionLocals_androidKt' type=androidx.compose.runtime.ProvidableCompositionLocal<android.content.Context> origin=GET_PROPERTY
+              $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              $changed: CONST Int type=kotlin.Int value=0
+          VAR name:zones type:kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val]
+            CALL 'public final fun <get-zones> (): kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> declared in me.kavishdevar.openrgb.models.OpenRGBDevice' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=GET_PROPERTY
+              $this: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+          VAR name:gridColors type:androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val]
+            BLOCK type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+              BLOCK type=kotlin.Unit origin=null
+                CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  key: CONST Int type=kotlin.Int value=-1166866071
+                CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                  composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  sourceInformation: CONST String type=kotlin.String value="CC(remember):DeviceControlsContent.kt#9igjgp"
+              VAR IR_TEMPORARY_VARIABLE name:tmp0_group type:androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val]
+                CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+                  <T>: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>
+                  $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  invalid: CONST Boolean type=kotlin.Boolean value=false
+                  block: BLOCK type=kotlin.Function0<androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>> origin=LAMBDA
+                    COMPOSITE type=kotlin.Unit origin=null
+                    FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$52 ($zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone>): androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=kotlin.Function0<androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>> origin=INLINE_LAMBDA reflectionTarget=null
+                      $zones: GET_VAR 'val zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=null
+              CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              GET_VAR 'val tmp0_group: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+          CALL 'public final fun LaunchedEffect (key1: kotlin.Any?, block: @[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.EffectsKt' type=kotlin.Unit origin=null
+            key1: CALL 'public final fun <get-leds> (): kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBLed> declared in me.kavishdevar.openrgb.models.OpenRGBDevice' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBLed> origin=GET_PROPERTY
+              $this: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+            block: BLOCK type=@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> origin=null
+              BLOCK type=kotlin.Unit origin=null
+                CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  key: CONST Int type=kotlin.Int value=-1166854520
+                CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                  composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  sourceInformation: CONST String type=kotlin.String value="CC(remember):DeviceControlsContent.kt#9igjgp"
+              VAR IR_TEMPORARY_VARIABLE name:tmp1_group type:@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> [val]
+                CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> origin=null
+                  <T>: @[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit>
+                  $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  invalid: CALL 'public final fun or (other: kotlin.Boolean): kotlin.Boolean [infix] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                    $this: CALL 'public final fun or (other: kotlin.Boolean): kotlin.Boolean [infix] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                      $this: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                        $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                        value: GET_VAR 'val zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=null
+                      other: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                        arg0: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                            other: CONST Int type=kotlin.Int value=896
+                          arg1: CONST Int type=kotlin.Int value=256
+                        arg1: CALL 'public final fun ANDAND (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                            $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                              arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                                $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                                other: CONST Int type=kotlin.Int value=512
+                              arg1: CONST Int type=kotlin.Int value=0
+                          arg1: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                            $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                            value: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                    other: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                      arg0: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                        arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                          $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                          other: CONST Int type=kotlin.Int value=14
+                        arg1: CONST Int type=kotlin.Int value=4
+                      arg1: CALL 'public final fun ANDAND (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                        arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                              $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                              other: CONST Int type=kotlin.Int value=8
+                            arg1: CONST Int type=kotlin.Int value=0
+                        arg1: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                          value: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                  block: BLOCK type=kotlin.Function0<@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit>> origin=LAMBDA
+                    COMPOSITE type=kotlin.Unit origin=null
+                    FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$53 ($zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone>, $gridColors: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>, $viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel, $device: me.kavishdevar.openrgb.models.OpenRGBDevice): @[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=kotlin.Function0<@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit>> origin=INLINE_LAMBDA reflectionTarget=null
+                      $zones: GET_VAR 'val zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=null
+                      $gridColors: GET_VAR 'val gridColors: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+                      $viewModel: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                      $device: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+              CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              GET_VAR 'val tmp1_group: @[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=0
+          VAR PROPERTY_DELEGATE name:brushPacked$delegate type:androidx.compose.runtime.MutableState<kotlin.Int> [val]
+            CALL 'public final fun rememberSaveable <T> (vararg inputs: kotlin.Any?, init: kotlin.Function0<T of androidx.compose.runtime.saveable.RememberSaveableKt.rememberSaveable>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): T of androidx.compose.runtime.saveable.RememberSaveableKt.rememberSaveable declared in androidx.compose.runtime.saveable.RememberSaveableKt' type=androidx.compose.runtime.MutableState<kotlin.Int> origin=null
+              <T>: androidx.compose.runtime.MutableState<kotlin.Int>
+              inputs: CALL 'public final fun arrayOfNulls <T> (size: kotlin.Int): kotlin.Array<T of kotlin.arrayOfNulls?> declared in kotlin' type=kotlin.Array<out kotlin.Any?> origin=null
+                <T>: kotlin.Any?
+                size: CONST Int type=kotlin.Int value=0
+              init: BLOCK type=kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> origin=null
+                BLOCK type=kotlin.Unit origin=null
+                  CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                    $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                    key: CONST Int type=kotlin.Int value=-1166824074
+                  CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                    composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                    sourceInformation: CONST String type=kotlin.String value="CC(remember):DeviceControlsContent.kt#9igjgp"
+                VAR IR_TEMPORARY_VARIABLE name:tmp2_group type:kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> [val]
+                  CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> origin=null
+                    <T>: kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>>
+                    $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                    invalid: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                      arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                        $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                        other: CONST Int type=kotlin.Int value=7168
+                      arg1: CONST Int type=kotlin.Int value=2048
+                    block: BLOCK type=kotlin.Function0<kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>>> origin=LAMBDA
+                      COMPOSITE type=kotlin.Unit origin=null
+                      FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$55 ($initialBrushColor: androidx.compose.ui.graphics.Color): kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=kotlin.Function0<kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>>> origin=INLINE_LAMBDA reflectionTarget=null
+                        $initialBrushColor: GET_VAR 'initialBrushColor: androidx.compose.ui.graphics.Color [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.graphics.Color origin=null
+                CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                GET_VAR 'val tmp2_group: kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> origin=null
+              $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              $changed: CONST Int type=kotlin.Int value=0
+          CALL 'public final fun Column (modifier: androidx.compose.ui.Modifier?, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.ColumnKt' type=kotlin.Unit origin=null
+            modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            verticalArrangement: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            horizontalAlignment: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            content: BLOCK type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=LAMBDA
+              COMPOSITE type=kotlin.Unit origin=null
+              FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$72 ($brushPacked$delegate: androidx.compose.runtime.MutableState<kotlin.Int>, $zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone>, $gridColors: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>, $tmp0_marker: kotlin.Int, $cellSize: androidx.compose.ui.unit.Dp, $cellSpacing: androidx.compose.ui.unit.Dp, $$composer: androidx.compose.runtime.Composer?, $$dirty: kotlin.Int, $viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel, $device: me.kavishdevar.openrgb.models.OpenRGBDevice, $context: android.content.Context, $deviceIndex: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                $brushPacked$delegate: GET_VAR 'val brushPacked$delegate: androidx.compose.runtime.MutableState<kotlin.Int> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.MutableState<kotlin.Int> origin=null
+                $zones: GET_VAR 'val zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=null
+                $gridColors: GET_VAR 'val gridColors: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+                $tmp0_marker: GET_VAR 'val tmp0_marker: kotlin.Int [val] declared in <no parent>' type=kotlin.Int origin=null
+                $cellSize: GET_VAR 'cellSize: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                $cellSpacing: GET_VAR 'cellSpacing: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                $$composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                $$dirty: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                $viewModel: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                $device: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                $context: GET_VAR 'val context: android.content.Context [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=android.content.Context origin=null
+                $deviceIndex: GET_VAR 'deviceIndex: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=0
+            $default: CONST Int type=kotlin.Int value=7
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventEnd (): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+      BRANCH
+        if: CONST Boolean type=kotlin.Boolean value=true
+        then: CALL 'public abstract fun skipToGroupEnd (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+    BLOCK type=kotlin.Unit origin=null
+      BLOCK type=kotlin.Unit origin=FOLDED_SAFE_CALL
+        WHEN type=kotlin.Unit origin=FOLDED_SAFE_CALL
+          BRANCH
+            if: COMPOSITE type=kotlin.Boolean origin=null
+              VAR IR_TEMPORARY_VARIABLE name:tmp3_safe_receiver type:androidx.compose.runtime.ScopeUpdateScope? [val]
+                CALL 'public abstract fun endRestartGroup (): androidx.compose.runtime.ScopeUpdateScope? declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: GET_VAR 'val tmp3_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  arg1: CONST Null type=kotlin.Nothing? value=null
+            then: CALL 'public abstract fun updateScope (block: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>): kotlin.Unit declared in androidx.compose.runtime.ScopeUpdateScope' type=kotlin.Unit origin=null
+              $this: GET_VAR 'val tmp3_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+              block: BLOCK type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=LAMBDA
+                COMPOSITE type=kotlin.Unit origin=null
+                CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                  <T>: kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit>
+                  dynamicCall: CALL 'public final fun invoke (p0: me.kavishdevar.openrgb.models.OpenRGBDevice, p1: kotlin.Int, p2: me.kavishdevar.openrgb.ui_logic.MainViewModel, p3: androidx.compose.ui.graphics.Color, p4: androidx.compose.ui.unit.Dp, p5: androidx.compose.ui.unit.Dp, p6: kotlin.Int, p7: kotlin.Int): kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> declared in kotlin.jvm.internal.invokeDynamic' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                    p0: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                    p1: GET_VAR 'deviceIndex: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    p2: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                    p3: GET_VAR 'initialBrushColor: androidx.compose.ui.graphics.Color [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.graphics.Color origin=null
+                    p4: GET_VAR 'cellSize: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                    p5: GET_VAR 'cellSpacing: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                    p6: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    p7: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                  bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                    tag: CONST Int type=kotlin.Int value=6
+                    owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+                    name: CONST String type=kotlin.String value="metafactory"
+                    descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+                    isInterface: CONST Boolean type=kotlin.Boolean value=false
+                  bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Any
+                    RAW_FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$73 ($device: me.kavishdevar.openrgb.models.OpenRGBDevice, $deviceIndex: kotlin.Int, $viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel, $initialBrushColor: androidx.compose.ui.graphics.Color, $cellSize: androidx.compose.ui.unit.Dp, $cellSpacing: androidx.compose.ui.unit.Dp, $$changed: kotlin.Int, $$default: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $force: kotlin.Int): kotlin.Unit? declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: androidx.compose.runtime.Composer?, p2: kotlin.Int?): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+          BRANCH
+            if: CONST Boolean type=kotlin.Boolean value=true
+            then: CONST Null type=kotlin.Any? value=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:41)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:407)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:424)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:169)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:52)
+	... 46 more
+Caused by: java.lang.AssertionError: Non-mapped local declaration: VAR IR_TEMPORARY_VARIABLE name:tmp0_marker type:kotlin.Int [val]
+  CALL 'public abstract fun <get-currentMarker> (): kotlin.Int declared in androidx.compose.runtime.Composer' type=kotlin.Int origin=null
+    $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw.<anonymous>.<anonymous>' type=androidx.compose.runtime.Composer? origin=null
+
+ in FUN name:MatrixEditor-wAHlXBw visibility:private modality:FINAL <> (device:me.kavishdevar.openrgb.models.OpenRGBDevice, deviceIndex:kotlin.Int, viewModel:me.kavishdevar.openrgb.ui_logic.MainViewModel, initialBrushColor:androidx.compose.ui.graphics.Color, cellSize:androidx.compose.ui.unit.Dp, cellSpacing:androidx.compose.ui.unit.Dp, $composer:androidx.compose.runtime.Composer?, $changed:kotlin.Int, $default:kotlin.Int) returnType:kotlin.Unit
+  annotations:
+    Composable
+    ComposableTarget(applier = "androidx.compose.ui.UiComposable")
+  VALUE_PARAMETER name:device index:0 type:me.kavishdevar.openrgb.models.OpenRGBDevice
+  VALUE_PARAMETER name:deviceIndex index:1 type:kotlin.Int
+  VALUE_PARAMETER name:viewModel index:2 type:me.kavishdevar.openrgb.ui_logic.MainViewModel
+  VALUE_PARAMETER name:initialBrushColor index:3 type:androidx.compose.ui.graphics.Color [assignable]
+  VALUE_PARAMETER name:cellSize index:4 type:androidx.compose.ui.unit.Dp [assignable]
+  VALUE_PARAMETER name:cellSpacing index:5 type:androidx.compose.ui.unit.Dp [assignable]
+  VALUE_PARAMETER name:$composer index:6 type:androidx.compose.runtime.Composer? [assignable]
+  VALUE_PARAMETER name:$changed index:7 type:kotlin.Int
+  VALUE_PARAMETER MASK_FOR_DEFAULT_FUNCTION name:$default index:8 type:kotlin.Int
+  BLOCK_BODY
+    BLOCK type=kotlin.Unit origin=null
+      SET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+        CALL 'public abstract fun startRestartGroup (key: kotlin.Int): androidx.compose.runtime.Composer declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.Composer origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+          key: CONST Int type=kotlin.Int value=2000848768
+      CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+        composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+        sourceInformation: CONST String type=kotlin.String value="C(MatrixEditor)P(2,3,5,4:c#ui.graphics.Color,0:c#ui.unit.Dp,1:c#ui.unit.Dp)374@16297L7,376@16355L266,386@16695L937,386@16667L965,411@17674L55,411@17657L72,413@17735L4179:DeviceControlsContent.kt#6fy1tv"
+    VAR name:$dirty type:kotlin.Int [val]
+      GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=1
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=6
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=6
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: WHEN type=kotlin.Boolean origin=IF
+                  BRANCH
+                    if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                      arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                        $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                        other: CONST Int type=kotlin.Int value=8
+                      arg1: CONST Int type=kotlin.Int value=0
+                    then: CALL 'public abstract fun changed (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                  BRANCH
+                    if: CONST Boolean type=kotlin.Boolean value=true
+                    then: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                then: CONST Int type=kotlin.Int value=4
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=2
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=2
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=48
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=48
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Int): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  value: GET_VAR 'deviceIndex: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                then: CONST Int type=kotlin.Int value=32
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=16
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=4
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=384
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=384
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: WHEN type=kotlin.Boolean origin=IF
+                  BRANCH
+                    if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                      arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                        $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                        other: CONST Int type=kotlin.Int value=512
+                      arg1: CONST Int type=kotlin.Int value=0
+                    then: CALL 'public abstract fun changed (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                  BRANCH
+                    if: CONST Boolean type=kotlin.Boolean value=true
+                    then: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                      $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                      value: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                then: CONST Int type=kotlin.Int value=256
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=128
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=8
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=3072
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=3072
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Long): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  value: CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=kotlin.Long origin=null
+                    <T>: androidx.compose.ui.graphics.Color
+                    <R>: kotlin.Long
+                    v: GET_VAR 'initialBrushColor: androidx.compose.ui.graphics.Color [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.graphics.Color origin=null
+                then: CONST Int type=kotlin.Int value=2048
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=1024
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=16
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=24576
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=24576
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Float): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  value: CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=kotlin.Float origin=null
+                    <T>: androidx.compose.ui.unit.Dp
+                    <R>: kotlin.Float
+                    v: GET_VAR 'cellSize: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                then: CONST Int type=kotlin.Int value=16384
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=8192
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+              $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+              other: CONST Int type=kotlin.Int value=32
+            arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=196608
+      BRANCH
+        if: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: CONST Int type=kotlin.Int value=196608
+          arg1: CONST Int type=kotlin.Int value=0
+        then: SET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Unit origin=null
+          CALL 'public final fun or (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            other: WHEN type=kotlin.Int origin=IF
+              BRANCH
+                if: CALL 'public open fun changed (value: kotlin.Float): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  value: CALL 'public final fun <unsafe-coerce> <T, R> (v: T of kotlin.jvm.internal.<unsafe-coerce>): R of kotlin.jvm.internal.<unsafe-coerce> declared in kotlin.jvm.internal' type=kotlin.Float origin=null
+                    <T>: androidx.compose.ui.unit.Dp
+                    <R>: kotlin.Float
+                    v: GET_VAR 'cellSpacing: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                then: CONST Int type=kotlin.Int value=131072
+              BRANCH
+                if: CONST Boolean type=kotlin.Boolean value=true
+                then: CONST Int type=kotlin.Int value=65536
+    WHEN type=kotlin.Unit origin=IF
+      BRANCH
+        if: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+              arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                other: CONST Int type=kotlin.Int value=74899
+              arg1: CONST Int type=kotlin.Int value=74898
+          arg1: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+            $this: CALL 'public abstract fun <get-skipping> (): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+              $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+        then: BLOCK type=kotlin.Unit origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                    $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    other: CONST Int type=kotlin.Int value=8
+                  arg1: CONST Int type=kotlin.Int value=0
+              then: SET_VAR 'initialBrushColor: androidx.compose.ui.graphics.Color [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.graphics.Color origin=null
+                CALL 'public final fun getWhite-0d7_KjU (): androidx.compose.ui.graphics.Color declared in androidx.compose.ui.graphics.Color.Companion' type=androidx.compose.ui.graphics.Color origin=GET_PROPERTY
+                  $this: GET_FIELD 'FIELD FIELD_FOR_OBJECT_INSTANCE name:Companion type:androidx.compose.ui.graphics.Color.Companion visibility:public [final,static] declared in androidx.compose.ui.graphics.Color' type=androidx.compose.ui.graphics.Color.Companion origin=null
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                    $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    other: CONST Int type=kotlin.Int value=16
+                  arg1: CONST Int type=kotlin.Int value=0
+              then: SET_VAR 'cellSize: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                  $receiver: CONST Int type=kotlin.Int value=28
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                    $this: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    other: CONST Int type=kotlin.Int value=32
+                  arg1: CONST Int type=kotlin.Int value=0
+              then: SET_VAR 'cellSpacing: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                CALL 'public final fun <get-dp> (): androidx.compose.ui.unit.Dp [inline] declared in androidx.compose.ui.unit.DpKt' type=androidx.compose.ui.unit.Dp origin=GET_PROPERTY
+                  $receiver: CONST Int type=kotlin.Int value=4
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventStart (key: kotlin.Int, dirty1: kotlin.Int, dirty2: kotlin.Int, info: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                key: CONST Int type=kotlin.Int value=2000848768
+                dirty1: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                dirty2: CONST Int type=kotlin.Int value=-1
+                info: CONST String type=kotlin.String value="me.kavishdevar.openrgb.components.MatrixEditor (DeviceControlsContent.kt:373)"
+          VAR name:context type:android.content.Context [val]
+            CALL 'public final fun <get-current> ($composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): T of androidx.compose.runtime.CompositionLocal [inline] declared in androidx.compose.runtime.CompositionLocal' type=android.content.Context origin=GET_PROPERTY
+              $this: TYPE_OP type=androidx.compose.runtime.CompositionLocal<T of androidx.compose.runtime.CompositionLocal> origin=IMPLICIT_CAST typeOperand=androidx.compose.runtime.CompositionLocal<T of androidx.compose.runtime.CompositionLocal>
+                CALL 'public final fun <get-LocalContext> (): androidx.compose.runtime.ProvidableCompositionLocal<android.content.Context> declared in androidx.compose.ui.platform.AndroidCompositionLocals_androidKt' type=androidx.compose.runtime.ProvidableCompositionLocal<android.content.Context> origin=GET_PROPERTY
+              $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              $changed: CONST Int type=kotlin.Int value=0
+          VAR name:zones type:kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val]
+            CALL 'public final fun <get-zones> (): kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> declared in me.kavishdevar.openrgb.models.OpenRGBDevice' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=GET_PROPERTY
+              $this: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+          VAR name:gridColors type:androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val]
+            BLOCK type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+              BLOCK type=kotlin.Unit origin=null
+                CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  key: CONST Int type=kotlin.Int value=-1166866071
+                CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                  composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  sourceInformation: CONST String type=kotlin.String value="CC(remember):DeviceControlsContent.kt#9igjgp"
+              VAR IR_TEMPORARY_VARIABLE name:tmp0_group type:androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val]
+                CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+                  <T>: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>
+                  $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  invalid: CONST Boolean type=kotlin.Boolean value=false
+                  block: BLOCK type=kotlin.Function0<androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>> origin=LAMBDA
+                    COMPOSITE type=kotlin.Unit origin=null
+                    FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$52 ($zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone>): androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=kotlin.Function0<androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>> origin=INLINE_LAMBDA reflectionTarget=null
+                      $zones: GET_VAR 'val zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=null
+              CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              GET_VAR 'val tmp0_group: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+          CALL 'public final fun LaunchedEffect (key1: kotlin.Any?, block: @[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.EffectsKt' type=kotlin.Unit origin=null
+            key1: CALL 'public final fun <get-leds> (): kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBLed> declared in me.kavishdevar.openrgb.models.OpenRGBDevice' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBLed> origin=GET_PROPERTY
+              $this: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+            block: BLOCK type=@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> origin=null
+              BLOCK type=kotlin.Unit origin=null
+                CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  key: CONST Int type=kotlin.Int value=-1166854520
+                CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                  composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  sourceInformation: CONST String type=kotlin.String value="CC(remember):DeviceControlsContent.kt#9igjgp"
+              VAR IR_TEMPORARY_VARIABLE name:tmp1_group type:@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> [val]
+                CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> origin=null
+                  <T>: @[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit>
+                  $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                  invalid: CALL 'public final fun or (other: kotlin.Boolean): kotlin.Boolean [infix] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                    $this: CALL 'public final fun or (other: kotlin.Boolean): kotlin.Boolean [infix] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                      $this: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                        $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                        value: GET_VAR 'val zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=null
+                      other: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                        arg0: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                          arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                            $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                            other: CONST Int type=kotlin.Int value=896
+                          arg1: CONST Int type=kotlin.Int value=256
+                        arg1: CALL 'public final fun ANDAND (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                          arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                            $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                              arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                                $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                                other: CONST Int type=kotlin.Int value=512
+                              arg1: CONST Int type=kotlin.Int value=0
+                          arg1: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                            $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                            value: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                    other: CALL 'public final fun OROR (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                      arg0: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                        arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                          $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                          other: CONST Int type=kotlin.Int value=14
+                        arg1: CONST Int type=kotlin.Int value=4
+                      arg1: CALL 'public final fun ANDAND (arg0: kotlin.Boolean, arg1: kotlin.Boolean): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                        arg0: CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                          $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                            arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                              $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                              other: CONST Int type=kotlin.Int value=8
+                            arg1: CONST Int type=kotlin.Int value=0
+                        arg1: CALL 'public open fun changedInstance (value: kotlin.Any?): kotlin.Boolean declared in androidx.compose.runtime.Composer' type=kotlin.Boolean origin=null
+                          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                          value: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                  block: BLOCK type=kotlin.Function0<@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit>> origin=LAMBDA
+                    COMPOSITE type=kotlin.Unit origin=null
+                    FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$53 ($zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone>, $gridColors: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>, $viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel, $device: me.kavishdevar.openrgb.models.OpenRGBDevice): @[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=kotlin.Function0<@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit>> origin=INLINE_LAMBDA reflectionTarget=null
+                      $zones: GET_VAR 'val zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=null
+                      $gridColors: GET_VAR 'val gridColors: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+                      $viewModel: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                      $device: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+              CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              GET_VAR 'val tmp1_group: @[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=@[ExtensionFunctionType] kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope, kotlin.Unit> origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=0
+          VAR PROPERTY_DELEGATE name:brushPacked$delegate type:androidx.compose.runtime.MutableState<kotlin.Int> [val]
+            CALL 'public final fun rememberSaveable <T> (vararg inputs: kotlin.Any?, init: kotlin.Function0<T of androidx.compose.runtime.saveable.RememberSaveableKt.rememberSaveable>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): T of androidx.compose.runtime.saveable.RememberSaveableKt.rememberSaveable declared in androidx.compose.runtime.saveable.RememberSaveableKt' type=androidx.compose.runtime.MutableState<kotlin.Int> origin=null
+              <T>: androidx.compose.runtime.MutableState<kotlin.Int>
+              inputs: CALL 'public final fun arrayOfNulls <T> (size: kotlin.Int): kotlin.Array<T of kotlin.arrayOfNulls?> declared in kotlin' type=kotlin.Array<out kotlin.Any?> origin=null
+                <T>: kotlin.Any?
+                size: CONST Int type=kotlin.Int value=0
+              init: BLOCK type=kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> origin=null
+                BLOCK type=kotlin.Unit origin=null
+                  CALL 'public abstract fun startReplaceGroup (key: kotlin.Int): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                    $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                    key: CONST Int type=kotlin.Int value=-1166824074
+                  CALL 'public final fun sourceInformation (composer: androidx.compose.runtime.Composer, sourceInformation: kotlin.String): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+                    composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                    sourceInformation: CONST String type=kotlin.String value="CC(remember):DeviceControlsContent.kt#9igjgp"
+                VAR IR_TEMPORARY_VARIABLE name:tmp2_group type:kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> [val]
+                  CALL 'public final fun cache <T> (invalid: kotlin.Boolean, block: @[DisallowComposableCalls] kotlin.Function0<T of androidx.compose.runtime.ComposerKt.cache>): T of androidx.compose.runtime.ComposerKt.cache [inline] declared in androidx.compose.runtime.ComposerKt' type=kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> origin=null
+                    <T>: kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>>
+                    $receiver: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                    invalid: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                      arg0: CALL 'public final fun and (other: kotlin.Int): kotlin.Int [infix] declared in kotlin.Int' type=kotlin.Int origin=null
+                        $this: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                        other: CONST Int type=kotlin.Int value=7168
+                      arg1: CONST Int type=kotlin.Int value=2048
+                    block: BLOCK type=kotlin.Function0<kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>>> origin=LAMBDA
+                      COMPOSITE type=kotlin.Unit origin=null
+                      FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$55 ($initialBrushColor: androidx.compose.ui.graphics.Color): kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=kotlin.Function0<kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>>> origin=INLINE_LAMBDA reflectionTarget=null
+                        $initialBrushColor: GET_VAR 'initialBrushColor: androidx.compose.ui.graphics.Color [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.graphics.Color origin=null
+                CALL 'public abstract fun endReplaceGroup (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                GET_VAR 'val tmp2_group: kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Function0<androidx.compose.runtime.MutableState<kotlin.Int>> origin=null
+              $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              $changed: CONST Int type=kotlin.Int value=0
+          CALL 'public final fun Column (modifier: androidx.compose.ui.Modifier?, verticalArrangement: androidx.compose.foundation.layout.Arrangement.Vertical?, horizontalAlignment: androidx.compose.ui.Alignment.Horizontal?, content: @[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int, $default: kotlin.Int): kotlin.Unit [inline] declared in androidx.compose.foundation.layout.ColumnKt' type=kotlin.Unit origin=null
+            modifier: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            verticalArrangement: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            horizontalAlignment: COMPOSITE type=kotlin.Nothing? origin=DEFAULT_VALUE
+              CONST Null type=kotlin.Nothing? value=null
+            content: BLOCK type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=LAMBDA
+              COMPOSITE type=kotlin.Unit origin=null
+              FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$72 ($brushPacked$delegate: androidx.compose.runtime.MutableState<kotlin.Int>, $zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone>, $gridColors: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>>, $tmp0_marker: kotlin.Int, $cellSize: androidx.compose.ui.unit.Dp, $cellSpacing: androidx.compose.ui.unit.Dp, $$composer: androidx.compose.runtime.Composer?, $$dirty: kotlin.Int, $viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel, $device: me.kavishdevar.openrgb.models.OpenRGBDevice, $context: android.content.Context, $deviceIndex: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $changed: kotlin.Int): kotlin.Unit declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=@[ExtensionFunctionType] kotlin.Function3<androidx.compose.foundation.layout.ColumnScope, androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+                $brushPacked$delegate: GET_VAR 'val brushPacked$delegate: androidx.compose.runtime.MutableState<kotlin.Int> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.MutableState<kotlin.Int> origin=null
+                $zones: GET_VAR 'val zones: kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.collections.List<me.kavishdevar.openrgb.models.OpenRGBZone> origin=null
+                $gridColors: GET_VAR 'val gridColors: androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.snapshots.SnapshotStateList<kotlin.collections.MutableList<kotlin.Int>> origin=null
+                $tmp0_marker: GET_VAR 'val tmp0_marker: kotlin.Int [val] declared in <no parent>' type=kotlin.Int origin=null
+                $cellSize: GET_VAR 'cellSize: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                $cellSpacing: GET_VAR 'cellSpacing: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                $$composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+                $$dirty: GET_VAR 'val $dirty: kotlin.Int [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                $viewModel: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                $device: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                $context: GET_VAR 'val context: android.content.Context [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=android.content.Context origin=null
+                $deviceIndex: GET_VAR 'deviceIndex: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+            $composer: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+            $changed: CONST Int type=kotlin.Int value=0
+            $default: CONST Int type=kotlin.Int value=7
+          WHEN type=kotlin.Unit origin=IF
+            BRANCH
+              if: CALL 'public final fun isTraceInProgress (): kotlin.Boolean declared in androidx.compose.runtime.ComposerKt' type=kotlin.Boolean origin=null
+              then: CALL 'public final fun traceEventEnd (): kotlin.Unit declared in androidx.compose.runtime.ComposerKt' type=kotlin.Unit origin=null
+      BRANCH
+        if: CONST Boolean type=kotlin.Boolean value=true
+        then: CALL 'public abstract fun skipToGroupEnd (): kotlin.Unit declared in androidx.compose.runtime.Composer' type=kotlin.Unit origin=null
+          $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+    BLOCK type=kotlin.Unit origin=null
+      BLOCK type=kotlin.Unit origin=FOLDED_SAFE_CALL
+        WHEN type=kotlin.Unit origin=FOLDED_SAFE_CALL
+          BRANCH
+            if: COMPOSITE type=kotlin.Boolean origin=null
+              VAR IR_TEMPORARY_VARIABLE name:tmp3_safe_receiver type:androidx.compose.runtime.ScopeUpdateScope? [val]
+                CALL 'public abstract fun endRestartGroup (): androidx.compose.runtime.ScopeUpdateScope? declared in androidx.compose.runtime.Composer' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  $this: GET_VAR '$composer: androidx.compose.runtime.Composer? [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.Composer? origin=null
+              CALL 'public final fun not (): kotlin.Boolean [operator] declared in kotlin.Boolean' type=kotlin.Boolean origin=null
+                $this: CALL 'public final fun EQEQ (arg0: kotlin.Any?, arg1: kotlin.Any?): kotlin.Boolean declared in kotlin.internal.ir' type=kotlin.Boolean origin=null
+                  arg0: GET_VAR 'val tmp3_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+                  arg1: CONST Null type=kotlin.Nothing? value=null
+            then: CALL 'public abstract fun updateScope (block: kotlin.Function2<androidx.compose.runtime.Composer, kotlin.Int, kotlin.Unit>): kotlin.Unit declared in androidx.compose.runtime.ScopeUpdateScope' type=kotlin.Unit origin=null
+              $this: GET_VAR 'val tmp3_safe_receiver: androidx.compose.runtime.ScopeUpdateScope? [val] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.runtime.ScopeUpdateScope? origin=null
+              block: BLOCK type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=LAMBDA
+                COMPOSITE type=kotlin.Unit origin=null
+                CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                  <T>: kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit>
+                  dynamicCall: CALL 'public final fun invoke (p0: me.kavishdevar.openrgb.models.OpenRGBDevice, p1: kotlin.Int, p2: me.kavishdevar.openrgb.ui_logic.MainViewModel, p3: androidx.compose.ui.graphics.Color, p4: androidx.compose.ui.unit.Dp, p5: androidx.compose.ui.unit.Dp, p6: kotlin.Int, p7: kotlin.Int): kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> declared in kotlin.jvm.internal.invokeDynamic' type=kotlin.Function2<androidx.compose.runtime.Composer?, kotlin.Int, kotlin.Unit> origin=null
+                    p0: GET_VAR 'device: me.kavishdevar.openrgb.models.OpenRGBDevice declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.models.OpenRGBDevice origin=null
+                    p1: GET_VAR 'deviceIndex: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    p2: GET_VAR 'viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=me.kavishdevar.openrgb.ui_logic.MainViewModel origin=null
+                    p3: GET_VAR 'initialBrushColor: androidx.compose.ui.graphics.Color [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.graphics.Color origin=null
+                    p4: GET_VAR 'cellSize: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                    p5: GET_VAR 'cellSpacing: androidx.compose.ui.unit.Dp [assignable] declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=androidx.compose.ui.unit.Dp origin=null
+                    p6: GET_VAR '$changed: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                    p7: GET_VAR '$default: kotlin.Int declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt.MatrixEditor-wAHlXBw' type=kotlin.Int origin=null
+                  bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                    tag: CONST Int type=kotlin.Int value=6
+                    owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+                    name: CONST String type=kotlin.String value="metafactory"
+                    descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+                    isInterface: CONST Boolean type=kotlin.Boolean value=false
+                  bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Any
+                    RAW_FUNCTION_REFERENCE 'private final fun MatrixEditor_wAHlXBw$lambda$73 ($device: me.kavishdevar.openrgb.models.OpenRGBDevice, $deviceIndex: kotlin.Int, $viewModel: me.kavishdevar.openrgb.ui_logic.MainViewModel, $initialBrushColor: androidx.compose.ui.graphics.Color, $cellSize: androidx.compose.ui.unit.Dp, $cellSpacing: androidx.compose.ui.unit.Dp, $$changed: kotlin.Int, $$default: kotlin.Int, $composer: androidx.compose.runtime.Composer?, $force: kotlin.Int): kotlin.Unit? declared in me.kavishdevar.openrgb.components.DeviceControlsContentKt' type=kotlin.Any
+                    CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                      method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: androidx.compose.runtime.Composer?, p2: kotlin.Int?): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+          BRANCH
+            if: CONST Boolean type=kotlin.Boolean value=true
+            then: CONST Null type=kotlin.Any? value=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.findLocalIndex(ExpressionCodegen.kt:882)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.genOrGetLocal$backend_jvm_codegen(ExpressionCodegen.kt:764)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:103)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:561)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:589)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:538)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitContainerExpression(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitBlock(IrElementVisitor.kt:126)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:409)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlock(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlock.accept(IrBlock.kt:18)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:1050)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitWhen(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrWhen.accept(IrWhen.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:524)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:529)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:134)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:236)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:124)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:45)
+	... 56 more
+
+

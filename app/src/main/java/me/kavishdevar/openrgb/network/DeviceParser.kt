@@ -11,6 +11,7 @@ import java.nio.ByteOrder
 
 
 object DeviceParser {
+    //Parsiranje raw podataka sa servera:
     fun parse(buffer: ByteBuffer, protocolVersion: Int): OpenRGBDevice {
         try {
             buffer.order(ByteOrder.LITTLE_ENDIAN)
@@ -76,9 +77,9 @@ object DeviceParser {
             val brightness = if (protocolVersion >= 3) buffer.int else 100
 
             val directionRaw = buffer.int
-            val direction = ModeDirection.values().getOrNull(directionRaw) ?: ModeDirection.MODE_DIRECTION_LEFT
+            val direction = ModeDirection.entries.getOrNull(directionRaw) ?: ModeDirection.MODE_DIRECTION_LEFT
 
-            val colorMode = ColorMode.values().getOrNull(buffer.int) ?: ColorMode.MODE_COLORS_NONE
+            val colorMode = ColorMode.entries.getOrNull(buffer.int) ?: ColorMode.MODE_COLORS_NONE
 
             val colorCount = buffer.short.toInt() and 0xFFFF
             val colors = List(colorCount) { readColor(buffer) }
@@ -178,3 +179,4 @@ object DeviceParser {
         return String(bytes, 0, length - 1)
     }
 }
+
